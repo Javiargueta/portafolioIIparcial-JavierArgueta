@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portafolio de Javier Argueta, estudiante de Ingeniería en Ciencias de la Computación en la UNICAH.">
+  <title>Javier Argueta — Portafolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#inicio" class="brand">Javier Argueta</a>
+      <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="nav" class="nav">
+        <ul>
+          <li><a href="#bio">Biografía</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inicio">
+
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="eyebrow">Estudiante de Ingeniería en Ciencias de la Computación</p>
+          <h1>Javier Argueta</h1>
+          <p class="lead">Desarrollo web y diseño de interfaces. Estudio en la Universidad Católica de Honduras (UNICAH), en Tegucigalpa.</p>
+          <div class="actions">
+            <a href="#proyectos" class="btn btn-primary">Ver proyectos</a>
+            <a href="#contacto" class="btn btn-secondary">Contacto</a>
+          </div>
+        </div>
+        <figure class="hero-photo">
+          <img src="./media/img/foto.png" alt="Fotografía de Javier Argueta" width="1146" height="1077">
+        </figure>
+      </div>
+    </section>
+
+    <section id="bio" class="section">
+      <div class="container two-col">
+        <h2>Biografía</h2>
+        <div class="prose">
+          <p>Soy Javier Argueta, estudiante de Ingeniería en Ciencias de la Computación en la Universidad Católica de Honduras (UNICAH), en Tegucigalpa. Nací en Juticalpa, Olancho, aunque crecí principalmente en Siguatepeque, y desde ahí llegué a Tegucigalpa a estudiar. Me gusta bastante el área de desarrollo web y diseño, y en general disfruto mucho la carrera que estoy estudiando.</p>
+          <p>Además de lo académico, me gusta mantenerme activo en la vida universitaria; formo parte del Centro Universitario Guaymura y de la organización estudiantil Espavel, espacios donde participo en distintas actividades y conozco gente nueva. Fuera de la universidad, el fútbol es algo que me apasiona bastante, tanto jugarlo como verlo.</p>
+          <p>En general me considero alguien sociable, al que le gusta involucrarse en lo que hace, ya sea en clases, en proyectos grupales o en actividades fuera del entorno académico.</p>
+
+          <dl class="facts">
+            <div><dt>Universidad</dt><dd>UNICAH, Tegucigalpa</dd></div>
+            <div><dt>Carrera</dt><dd>Ing. en Ciencias de la Computación</dd></div>
+            <div><dt>Intereses</dt><dd>Desarrollo web, diseño, fútbol</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section id="proyectos" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Proyectos</h2>
+          <p>Algunos de los proyectos que he realizado.</p>
+        </div>
+
+        <div class="carusel" aria-roledescription="carrusel">
+          <div class="carusel-viewport">
+            <div class="carusel-trail">
+              <figure class="slide">
+                <img src="./media/img/p1.png" alt="Proyecto 1: interfaz de red social" loading="lazy">
+                <figcaption><strong>Proyecto 01</strong> Interfaz de red social</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="./media/img/p2.png" alt="Proyecto 2: aplicación móvil de transporte" loading="lazy">
+                <figcaption><strong>Proyecto 02</strong> Aplicación móvil de transporte</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="./media/img/p3.png" alt="Proyecto 3: interfaz de chat" loading="lazy">
+                <figcaption><strong>Proyecto 03</strong> Interfaz de chat web</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="section">
+      <div class="container two-col">
+        <h2>Contacto</h2>
+        <div class="prose">
+          <p>Si deseas contactarme, puedes escribirme a mi correo electrónico.</p>
+          <a class="contact-link" href="mailto:javiarguetaosorio2004@gmail.com">
+            <img src="./media/img/email.png" alt="" width="28" height="28">
+            <span>javiarguetaosorio2004@gmail.com</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>&copy; <span id="year">2026</span> Javier Argueta</span>
+      <a href="#inicio">Volver arriba</a>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

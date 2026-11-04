@@ -1,0 +1,17 @@
+{
+  "name": "portafolio-javier-argueta",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^8.0.0",
+    "html-minifier-terser": "^7.2.0",
+    "less": "^4.9.1",
+    "vite": "^8.3.5"
+  }
+}

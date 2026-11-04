@@ -1,0 +1,166 @@
+.container {
+  width: 100%;
+  max-width: @container;
+  margin: 0 auto;
+  padding: 0 @gutter;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: fade(@color-bg, 95%);
+  border-bottom: 1px solid @color-border;
+
+  &-inner {
+    .flex-center();
+    justify-content: space-between;
+    height: @header-h;
+  }
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+
+.nav {
+  ul {
+    .flex-center();
+    gap: 2rem;
+  }
+
+  a {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: @color-muted;
+    text-decoration: none;
+    transition: color @ease;
+
+    &:hover {
+      color: @color-text;
+    }
+  }
+}
+
+.menu-toggle {
+  .reset-button();
+  .focus-ring();
+  display: none;
+  width: 40px;
+  height: 40px;
+  position: relative;
+
+  span {
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    height: 2px;
+    background: @color-text;
+    transition: transform @ease, opacity @ease;
+
+    &:nth-child(1) { top: 13px; }
+    &:nth-child(2) { top: 19px; }
+    &:nth-child(3) { top: 25px; }
+  }
+
+  &.is-open span {
+    &:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+    &:nth-child(2) { opacity: 0; }
+    &:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+  }
+}
+
+@media @bp-sm {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav {
+    position: absolute;
+    top: @header-h;
+    left: 0;
+    right: 0;
+    background: @color-bg;
+    border-bottom: 1px solid @color-border;
+    display: none;
+
+    &.is-open {
+      display: block;
+    }
+
+    ul {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      padding: 0.5rem @gutter 1rem;
+    }
+
+    a {
+      display: block;
+      padding: 0.75rem 0;
+    }
+  }
+}
+
+.section {
+  padding: 5rem 0;
+  border-top: 1px solid @color-border;
+
+  &-alt {
+    background: @color-bg-alt;
+  }
+
+  &-head {
+    margin-bottom: 2.5rem;
+
+    p {
+      color: @color-muted;
+      margin-top: 0.5rem;
+    }
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 3rem;
+}
+
+@media @bp-md {
+  .section {
+    padding: 3.5rem 0;
+  }
+
+  .two-col {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
+.footer {
+  border-top: 1px solid @color-border;
+  padding: 2rem 0;
+  font-size: 0.9rem;
+  color: @color-subtle;
+
+  &-inner {
+    .flex-center();
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      color: @color-text;
+    }
+  }
+}

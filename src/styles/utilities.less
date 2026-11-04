@@ -1,0 +1,18 @@
+@spacers: 0, 0.5rem, 1rem, 1.5rem, 2rem, 3rem;
+
+each(@spacers, {
+  .mt-@{index} { margin-top: @value; }
+  .mb-@{index} { margin-bottom: @value; }
+});
+
+.text-center { text-align: center; }
+.text-muted { color: @color-muted; }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}

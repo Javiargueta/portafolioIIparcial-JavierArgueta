@@ -1,0 +1,256 @@
+.hero {
+  padding: 5rem 0;
+
+  &-inner {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 3.25rem;
+    letter-spacing: -0.035em;
+    margin-bottom: 1.25rem;
+  }
+
+  &-photo {
+    img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: 50% 30%;
+      border-radius: @radius;
+      background: @color-bg-alt;
+    }
+  }
+}
+
+.eyebrow {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: @color-subtle;
+  margin-bottom: 1rem;
+}
+
+.lead {
+  font-size: 1.125rem;
+  color: @color-muted;
+  max-width: 34rem;
+}
+
+.actions {
+  .flex-center();
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+@media @bp-md {
+  .hero {
+    padding: 3rem 0;
+
+    &-inner {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    &-photo {
+      order: -1;
+      max-width: 360px;
+    }
+  }
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.25rem;
+  border-radius: @radius;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: background-color @ease, border-color @ease;
+
+  &-primary {
+    background: @color-primary;
+    color: #fff;
+
+    &:hover {
+      background: @color-primary-hover;
+    }
+  }
+
+  &-secondary {
+    border-color: @color-border;
+    color: @color-text;
+
+    &:hover {
+      border-color: @color-subtle;
+    }
+  }
+}
+
+.prose {
+  max-width: 42rem;
+
+  p {
+    color: @color-muted;
+
+    & + p {
+      margin-top: 1rem;
+    }
+  }
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid @color-border;
+
+  dt {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: @color-subtle;
+  }
+
+  dd {
+    margin-top: 0.25rem;
+    font-weight: 500;
+  }
+
+  @media @bp-sm {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+.carusel {
+  position: relative;
+
+  &-viewport {
+    overflow: hidden;
+    border: 1px solid @color-border;
+    border-radius: @radius;
+    background: @color-bg;
+  }
+
+  &-trail {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+
+  .slide {
+    flex: 0 0 100%;
+
+    img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      background: @color-bg-alt;
+    }
+
+    figcaption {
+      padding: 1rem 1.25rem;
+      border-top: 1px solid @color-border;
+      color: @color-muted;
+      font-size: 0.95rem;
+
+      strong {
+        color: @color-text;
+        font-weight: 600;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  &-btn {
+    .reset-button();
+    .focus-ring();
+    position: absolute;
+    top: calc(50% - 1.5rem);
+    transform: translateY(-50%);
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: @color-bg;
+    border: 1px solid @color-border;
+    font-size: 1.1rem;
+    transition: border-color @ease;
+
+    &:hover {
+      border-color: @color-subtle;
+    }
+
+    &-prev { left: 1rem; }
+    &-next { right: 1rem; }
+  }
+
+  &-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1.25rem;
+
+    button {
+      .reset-button();
+      .focus-ring();
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: @color-border;
+      transition: background-color @ease, width @ease;
+
+      &.is-active {
+        width: 24px;
+        border-radius: 4px;
+        background: @color-primary;
+      }
+    }
+  }
+
+  @media @bp-sm {
+    &-btn {
+      width: 36px;
+      height: 36px;
+      font-size: 1rem;
+
+      &-prev { left: 0.5rem; }
+      &-next { right: 0.5rem; }
+    }
+  }
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  padding: 0.85rem 1.1rem;
+  border: 1px solid @color-border;
+  border-radius: @radius;
+  font-weight: 500;
+  text-decoration: none;
+  word-break: break-all;
+  transition: border-color @ease;
+
+  img {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    border-radius: 4px;
+  }
+
+  &:hover {
+    border-color: @color-subtle;
+  }
+}
