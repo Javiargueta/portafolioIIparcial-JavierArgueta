@@ -34,7 +34,7 @@ export default defineConfig(({ command }) => ({
     },
   },
   build: {
-    outDir: 'dist',
+    outDir: 'docs',
     minify: true,
     cssMinify: true,
     assetsInlineLimit: 0,
